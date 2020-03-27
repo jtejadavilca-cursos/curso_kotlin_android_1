@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.helloworld.R
+import com.example.helloworld.models.Student
 import kotlinx.android.synthetic.main.activity_intents.*
 
 class IntentsActivity : AppCompatActivity() {
@@ -28,11 +29,14 @@ class IntentsActivity : AppCompatActivity() {
 
     private fun intentFlags() {
         val intent = Intent(this, IntentExtrasActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY //No guarda el activity en el stack
         startActivity(intent)
     }
 
     private fun intentObjects() {
         val intent = Intent(this, IntentExtrasActivity::class.java)
+        val student = Student("Alberto", "Santos", 24, false)
+        intent.putExtra("student", student)
         startActivity(intent)
     }
 }

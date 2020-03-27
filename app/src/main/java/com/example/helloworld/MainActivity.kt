@@ -8,13 +8,18 @@ import android.widget.Toast
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.Toolbar
 import com.example.helloworld.activities.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var toolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        toolbar.text
 
         val btnToLifeCycle = findViewById<Button>(R.id.button_to_cycle)
         val btnClickToEvents = findViewById<Button>(R.id.button_to_click)
