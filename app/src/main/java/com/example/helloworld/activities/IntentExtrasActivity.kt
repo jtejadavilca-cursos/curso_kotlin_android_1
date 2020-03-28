@@ -3,15 +3,22 @@ package com.example.helloworld.activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import com.example.helloworld.R
 import com.example.helloworld.models.Student
+import com.example.helloworld.others.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_intent_extras.*
 
-class IntentExtrasActivity : AppCompatActivity() {
+class IntentExtrasActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_extras)
+
+        toolbarToLoad(toolbar as Toolbar)
+        enableHomeDisplay(false)
+
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         btnGoBack.setOnClickListener { startActivity(Intent(this, IntentsActivity::class.java)) }
 

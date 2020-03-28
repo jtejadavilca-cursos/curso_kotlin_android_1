@@ -6,20 +6,20 @@ import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.widget.Toast
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import android.widget.Button
-import android.widget.Toolbar
 import com.example.helloworld.activities.*
+import com.example.helloworld.others.ToolbarActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var toolbar: Toolbar
+class MainActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        toolbar.text
+        toolbarToLoad(toolbar as Toolbar)
+
 
         val btnToLifeCycle = findViewById<Button>(R.id.button_to_cycle)
         val btnClickToEvents = findViewById<Button>(R.id.button_to_click)

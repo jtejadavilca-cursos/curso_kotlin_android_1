@@ -1,4 +1,4 @@
-package com.example.helloworld.activities
+package com.example.helloworld.others
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
